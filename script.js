@@ -33,7 +33,7 @@ function generatePassword() {
   }
 
   //if password is between 8 and 128 it continues with the other prompts
-  if (passwordLength < 8 && passwordLength > 128) {
+  if (passwordLength >= 8 && passwordLength <= 128) {
     var lowerCase = confirm("Would you like lowercase letters in your password?");
     var upperCase = confirm("Would you like uppercase letters in your password?");
     var numeric = confirm("Would you like numerical values in your password?");
@@ -89,7 +89,7 @@ function generatePassword() {
   }
 
   else if(numeric && specialChar){
-    options = numeric.concat(specChar);
+    options = num.concat(specChar);
   }
 
   //else if for 1 true criteria option
