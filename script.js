@@ -9,10 +9,8 @@ num = [0,1,2,3,4,5,6,7,8,9];
 //special characters
 specChar = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
 
+//used to combine all the arrays depending on the criteria choosen
 var options;
-
-
-
 
 // Write password to the #password input
 function writePassword() {
@@ -50,7 +48,7 @@ function generatePassword() {
     options = lower.concat(upper, num, specChar);
   }
 
-  //else if for 3 true criteria options
+  //else if statements for 3 true criteria options
   else if(lowerCase && upperCase && numeric){
     options = lower.concat(upper, num);
   }
@@ -67,7 +65,7 @@ function generatePassword() {
     options = upper.concat(num, specChar);
   }
 
-  //else if for 2 true criteria options
+  //else if statements for 2 true criteria options
   else if(lowerCase && upperCase){
     options = lower.concat(upper);
   }
@@ -92,7 +90,7 @@ function generatePassword() {
     options = num.concat(specChar);
   }
 
-  //else if for 1 true criteria option
+  //else if statements for 1 true criteria option
   else if(lowerCase){
     options = lower;
   }
